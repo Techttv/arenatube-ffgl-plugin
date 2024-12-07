@@ -15,7 +15,7 @@ std::string url_exec_command(const char* cmd) {
 
 std::string url_get_youtube_mp4(const char* youtube_url, int max_quality) {
     char cmd[300];
-    sprintf_s(cmd, 300, "C:\\ArenaTube\\youtube-dl.exe -g -f \"bestvideo[ext = webm][height <= %d]\" %s", max_quality, youtube_url);
+    sprintf_s(cmd, 300, "C:\\ArenaTube\\yt-dlp.exe -g -f \"bestvideo[ext = webm][height <= %d]\" %s", max_quality, youtube_url);
     return url_exec_command((const char*)cmd).c_str();
 }
 
